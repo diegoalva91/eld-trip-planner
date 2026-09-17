@@ -178,9 +178,6 @@ pytest
 3. Submit a trip such as Chicago → Indianapolis → Columbus
 4. Confirm the route and daily logs render correctly
 
-## 3-minute presentation script
-
-"This project is an ELD trip planner built with Django and React. It takes a trip request with current location, pickup, drop-off, and current cycle hours, then geocodes the locations using OpenStreetMap Nominatim, calculates a route with OSRM, and applies FMCSA-style Hours of Service rules to determine required breaks, rest, fuel, and daily log entries. The frontend displays the route on an OpenStreetMap map and includes the trip summaries, timelines, instructions, and log sheet outputs. It uses free public services and is designed for an assessment/demo workflow, with clear assumptions for property-carrying operations and daily HOS compliance."
 
 ## Important note about public services
 
