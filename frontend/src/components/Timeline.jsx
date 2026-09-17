@@ -1,11 +1,11 @@
+import AccordionSection from './AccordionSection'
+
 const statusLabel = {
   driving: 'Driving',
   on_duty_not_driving: 'On duty',
   off_duty: 'Off duty',
   sleeper_berth: 'Sleeper berth',
 }
-
-import AccordionSection from './AccordionSection'
 
 export default function Timeline({ events }) {
   return (

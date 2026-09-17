@@ -98,7 +98,6 @@ export default function App() {
         </section>
 
         <section className="panel map-panel">
-          {/* The OpenStreetMap base map is rendered immediately, even before a trip is planned. */}
           <RouteMap result={result} />
         </section>
       </main>

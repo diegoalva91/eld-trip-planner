@@ -75,12 +75,7 @@ REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
 }
 
-# ---------------------------------------------------------------------------
-# OpenStreetMap / Nominatim / OSRM configuration
-# ---------------------------------------------------------------------------
-# Geocoding uses the public Nominatim service directly. Nominatim requires a
-# custom application User-Agent and limits public clients to at most 1 request
-# per second. Set NOMINATIM_CONTACT_EMAIL in .env when you have a contact email.
+# OpenStreetMap services used by the trip planner.
 NOMINATIM_BASE_URL = os.getenv(
     "NOMINATIM_BASE_URL",
     "https://nominatim.openstreetmap.org",

@@ -263,7 +263,6 @@ h2 { margin: 7px 0 0; font-size: 1.65rem; letter-spacing: -.025em; }
   .log-sheet { break-after: page; box-shadow: none; border: 1px solid #555; }
 }
 
-/* Enhanced logbook controls */
 .trip-form select,
 .logbook-details input {
   width: 100%;
@@ -313,7 +312,6 @@ h2 { margin: 7px 0 0; font-size: 1.65rem; letter-spacing: -.025em; }
   .daily-log-actions { align-items: stretch; flex-direction: column; }
 }
 
-/* --- OpenStreetMap integration ------------------------------------------------ */
 .osm-map {
   height: 100%;
   min-height: 610px;

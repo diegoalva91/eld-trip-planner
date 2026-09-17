@@ -67,7 +67,6 @@ export default function RouteMap({ result }) {
         className="osm-map"
       >
         <TileLayer
-          // Official OpenStreetMap Standard tile endpoint. No API key is needed.
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           maxZoom={19}
