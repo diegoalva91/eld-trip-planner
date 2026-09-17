@@ -5,15 +5,11 @@ const statusLabel = {
   sleeper_berth: 'Sleeper berth',
 }
 
+import AccordionSection from './AccordionSection'
+
 export default function Timeline({ events }) {
   return (
-    <section className="panel">
-      <div className="section-heading">
-        <div>
-          <span className="eyebrow">Generated HOS plan</span>
-          <h2>Trip timeline</h2>
-        </div>
-      </div>
+    <AccordionSection eyebrow="Generated HOS plan" title="Trip timeline" summary={`${events.length} planned events`}>
       <div className="timeline">
         {events.map((event, index) => (
           <div className={`timeline-row status-${event.status}`} key={`${event.start}-${index}`}>
@@ -31,6 +27,6 @@ export default function Timeline({ events }) {
           </div>
         ))}
       </div>
-    </section>
+    </AccordionSection>
   )
 }

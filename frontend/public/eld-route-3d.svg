@@ -1,0 +1,56 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D3734"/>
+      <stop offset="0.55" stop-color="#155C50"/>
+      <stop offset="1" stop-color="#0A292A"/>
+    </linearGradient>
+    <linearGradient id="road" x1="795" y1="480" x2="795" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#395E5B"/>
+      <stop offset="1" stop-color="#101F27"/>
+    </linearGradient>
+    <linearGradient id="truck" x1="1040" y1="540" x2="1190" y2="725" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5E2B6"/>
+      <stop offset="1" stop-color="#C98555"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#06191B" flood-opacity="0.42"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="skewY(-18)">
+      <path d="M80 0H0V80" stroke="#A9D6C1" stroke-opacity="0.09"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1290" cy="180" r="220" fill="#8AC7A8" fill-opacity="0.12"/>
+  <circle cx="1290" cy="180" r="140" fill="#B6E2BF" fill-opacity="0.08"/>
+  <path d="M0 460L800 335L1600 460V1000H0V460Z" fill="#1C5A4E"/>
+  <path d="M0 460L800 335L1600 460" stroke="#9AD1B3" stroke-opacity="0.2" stroke-width="3"/>
+  <path d="M420 1000L720 470L880 470L1370 1000H420Z" fill="url(#road)"/>
+  <path d="M420 1000L720 470M1370 1000L880 470" stroke="#A9D6C1" stroke-opacity="0.24" stroke-width="4"/>
+  <path d="M820 535L800 592M785 646L755 735M730 807L675 970" stroke="#F6D98D" stroke-width="12" stroke-linecap="round" stroke-dasharray="30 42"/>
+  <path d="M0 500H1600V1000H0V500Z" fill="url(#grid)"/>
+  <path d="M220 710C400 600 500 720 650 650C780 590 840 490 1000 500C1110 510 1160 585 1320 530" stroke="#C4F0D0" stroke-opacity="0.48" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 20"/>
+  <g filter="url(#shadow)" transform="translate(0 20)">
+    <path d="M935 615L1100 548L1250 640L1085 710L935 615Z" fill="#0C2428" fill-opacity="0.7"/>
+    <path d="M1000 500L1140 458L1260 528L1120 574L1000 500Z" fill="#E9B87D"/>
+    <path d="M1000 500V630L1120 704V574L1000 500Z" fill="#C87E58"/>
+    <path d="M1120 574V704L1260 655V528L1120 574Z" fill="url(#truck)"/>
+    <path d="M1000 500L1140 458L1260 528L1120 574L1000 500Z" stroke="#FFE4AE" stroke-opacity="0.7" stroke-width="4"/>
+    <path d="M1142 520L1220 538L1220 580L1142 559V520Z" fill="#285763"/>
+    <path d="M1152 526L1208 539V565L1152 551V526Z" fill="#A7D5D2" fill-opacity="0.72"/>
+    <path d="M1038 608L1100 629" stroke="#F6D98D" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="1047" cy="664" r="22" fill="#10262A" stroke="#94B8A5" stroke-width="8"/>
+    <circle cx="1205" cy="616" r="22" fill="#10262A" stroke="#94B8A5" stroke-width="8"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="560" cy="610" r="32" fill="#B6E2BF"/>
+    <circle cx="560" cy="610" r="12" fill="#125249"/>
+    <path d="M560 650V740" stroke="#B6E2BF" stroke-width="5" stroke-dasharray="8 12"/>
+    <circle cx="1260" cy="510" r="32" fill="#F0B47A"/>
+    <circle cx="1260" cy="510" r="12" fill="#813E35"/>
+    <path d="M1260 550V625" stroke="#F0B47A" stroke-width="5" stroke-dasharray="8 12"/>
+  </g>
+  <g fill="#D5F0D0" fill-opacity="0.7">
+    <circle cx="230" cy="220" r="4"/><circle cx="390" cy="150" r="3"/><circle cx="610" cy="245" r="5"/><circle cx="1040" cy="170" r="4"/><circle cx="1430" cy="300" r="5"/>
+  </g>
+</svg>
