@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: eld-trip-planner-backend
+    env: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "false"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: "localhost,127.0.0.1,eld-trip-planner-backend.onrender.com"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://your-vercel-app.vercel.app,http://localhost:5173,http://127.0.0.1:5173"
+      - key: NOMINATIM_BASE_URL
+        value: "https://nominatim.openstreetmap.org"
+      - key: NOMINATIM_USER_AGENT
+        value: "ELDTripPlanner/2.0"
+      - key: NOMINATIM_CONTACT_EMAIL
+        value: ""
+      - key: NOMINATIM_MIN_INTERVAL_SECONDS
+        value: "1.1"
+      - key: NOMINATIM_CACHE_SECONDS
+        value: "2592000"
+      - key: OSRM_BASE_URL
+        value: "https://router.project-osrm.org/route/v1/driving"

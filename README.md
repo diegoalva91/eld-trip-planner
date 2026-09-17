@@ -150,6 +150,38 @@ cd backend
 pytest
 ```
 
+## Deploy to Vercel + Render
+
+### 1) Deploy the backend to Render
+
+- Create a new Web Service on Render
+- Connect this repository
+- Set the root directory to `backend`
+- Build command: `pip install -r requirements.txt && python manage.py collectstatic --noinput`
+- Start command: `gunicorn config.wsgi:application --bind 0.0.0.0:$PORT`
+- Add environment variables from `backend/.env.example`
+- Set `DJANGO_ALLOWED_HOSTS` to your Render domain
+- Set `CORS_ALLOWED_ORIGINS` to your Vercel frontend URL
+
+### 2) Deploy the frontend to Vercel
+
+- Import the repository into Vercel
+- Set the project root to the repository root
+- Set environment variable:
+  - `VITE_API_BASE_URL=https://your-render-service.onrender.com/api`
+- Deploy
+
+### 3) Verify the live app
+
+1. Open the Vercel frontend URL
+2. Confirm the OpenStreetMap map loads immediately
+3. Submit a trip such as Chicago → Indianapolis → Columbus
+4. Confirm the route and daily logs render correctly
+
+## 3-minute presentation script
+
+"This project is an ELD trip planner built with Django and React. It takes a trip request with current location, pickup, drop-off, and current cycle hours, then geocodes the locations using OpenStreetMap Nominatim, calculates a route with OSRM, and applies FMCSA-style Hours of Service rules to determine required breaks, rest, fuel, and daily log entries. The frontend displays the route on an OpenStreetMap map and includes the trip summaries, timelines, instructions, and log sheet outputs. It uses free public services and is designed for an assessment/demo workflow, with clear assumptions for property-carrying operations and daily HOS compliance."
+
 ## Important note about public services
 
 OpenStreetMap's public tile and Nominatim servers are community-funded, best-effort services. This implementation is appropriate for a small assessment/demo. For a production fleet or high-volume application, use a hosted provider or self-host the relevant services.
